@@ -24,9 +24,12 @@ namespace Military_control_system
             AttackSystem? AttackSystem = ChooseWeaponSystem(target);
             if (AttackSystem != null)
             {
-                AttackSystem.ExecuteStrike(target);
-                Terrorist.IsAlive = false;
-                PrintSuccessMessage(target, time, Terrorist);
+                bool attac = AttackSystem.ExecuteStrike(target);
+                if (attac)
+                {
+                    Terrorist.IsAlive = false;
+                    PrintSuccessMessage(target, time, Terrorist); 
+                }
             }
         }
 
