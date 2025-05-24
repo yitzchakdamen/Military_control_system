@@ -1,8 +1,8 @@
 namespace Military_control_system
 {
-    class Organization
+    public class Organization
     {
-        string EstablishmentDate, CurrentCommander, Name; // Date of establishment of the organization and current commander
+        public string EstablishmentDate, CurrentCommander, Name; // Date of establishment of the organization and current commander
         public Organization(string name, string establishmentDate, string currentCommander)
         {
             EstablishmentDate = establishmentDate;
