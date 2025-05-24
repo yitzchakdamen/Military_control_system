@@ -95,7 +95,7 @@ namespace Military_control_system
             int fuel = random.Next(150, 300);
             int ammunition = random.Next(1, 3);
 
-            if (!CanStrike(fuel, 1)) return false;
+            if (!CanStrike(fuel, ammunition)) return false;
             AmmunitionCapacity -= ammunition;
             FuelSupply -= fuel;
             Console.WriteLine($"F16 {Name} dropped {TargetTypeAndWeapon[target]} bomb on target.");
@@ -121,7 +121,7 @@ namespace Military_control_system
             int fuel = random.Next(50, 100);
             int ammunition = random.Next(1, 3);
 
-            if (!CanStrike(fuel, 1)) return false;
+            if (!CanStrike(fuel, ammunition)) return false;
             AmmunitionCapacity -= ammunition;
             FuelSupply -= fuel;
             Console.WriteLine($"Drone {Name} dropped {TargetTypeAndWeapon[target]} bomb on target.");
@@ -147,7 +147,7 @@ namespace Military_control_system
             int fuel = random.Next(10, 80);
             int ammunition = random.Next(3, 40);
 
-            if (!CanStrike(fuel, 1)) return false;
+            if (!CanStrike(fuel, ammunition)) return false;
             AmmunitionCapacity -= ammunition;
             FuelSupply -= fuel;
             Console.WriteLine($"Artillery {Name} dropped {TargetTypeAndWeapon[target]} bomb on target.");
